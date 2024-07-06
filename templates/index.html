@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/index_layout.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/static/transmission.js"></script>
+    <title>Title</title>
+</head>
+<body>
+{% csrf_token %}
+<img src="/static/logo.png" alt="">
+<input class="c-checkbox" type="checkbox" id="checkbox">
+<div class="c-formContainer">
+  <div class="c-form">
+    <input id="inputText" class="c-form__input" placeholder="어떤 꿈을 꾸셨나요?" required>
+    <label id="sendButton" class="c-form__buttonLabel" for="checkbox">
+      <button  class="c-form__button" type="button" >입력</button>
+    </label>
+    <label class="c-form__toggle" for="checkbox" data-title="시작하기"></label>
+  </div>
+</div>
+<br><br>
+<div id="dream-container"></div>
+</body>
+</html>
